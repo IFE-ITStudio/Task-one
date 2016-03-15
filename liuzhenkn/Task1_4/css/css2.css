@@ -20,7 +20,7 @@ html,body{
 	-ms-transform:translateY(-50%);
 }
 .container p{
-	display: inline-block;
+	word-wrap:break-word;
 	margin:50px;
 }
 .circle_left,.circle_right{
