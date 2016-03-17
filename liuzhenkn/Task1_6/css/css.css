@@ -50,6 +50,7 @@ body{
 .banner_img{
 	position: relative;
 	width: 641px;
+	height: 305px;
 }
 .cover_left,.cover_right{
 	height: 301px;
@@ -212,6 +213,7 @@ body{
 .right_side .right_img{
 	position: relative;
 	margin-bottom: 20px;
+	height: 261px;
 }
 .right_side .right_img .cover{
 	position: absolute;

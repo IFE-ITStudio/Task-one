@@ -6,24 +6,28 @@ html,body{
 	font-family: "Microsoft YaHei";
 	font-size: 14px;
 }
-a{
-	text-decoration: none;
-	color:#1d86ca;
+.flexbox-container {
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	/* 水平居中*/
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	/* 垂直居中 */
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
 }
-.container{
-	margin: 0 auto;
+.flexbox-container .box{
 	background-color: #ccc;
 	width: 400px;
+	height: 200px;
 	position: relative;
-	top: 50%;
 	overflow: hidden;
-	transform:translateY(-50%);
-	-moz-transform:translateY(-50%);
-	-webkit-transform:translateY(-50%);
-	-o-transform:translateY(-50%);
-	-ms-transform:translateY(-50%);
 }
-.container p{
+.flexbox-container .box p{
 	word-wrap:break-word;
 	margin:50px;
 }
