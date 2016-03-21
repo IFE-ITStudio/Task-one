@@ -1,0 +1,172 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: 'Microsoft YaHei',arial,sans-serif,'宋体';
+	min-width: 1280px;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.head{
+	height: 56px;
+	background-color: #2189bf;
+	position: relative;
+	width: 100%;
+}
+.head .logo{
+	position: absolute;
+	left: 42px;
+}
+.head .login_search{
+	position: absolute;
+	top: 14px;
+	right: 120px;
+}
+.head .login_search .search,.login{
+	float: left;
+}
+.head .login_search .search .search_img{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../img/search.png);
+	position: absolute;
+	top: 5px;
+	left: 8px;
+}
+.head .login_search .search input{
+	border: none;
+	height: 28px;
+	border-radius: 50px;
+	padding: 0 35px;
+	width: 140px;
+	transition: .4s width ease-out;
+}
+.head .login_search .search input:focus{
+	width: 260px;
+}
+.head .login_search .login .login_img{
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	background:url(../img/user.png);
+	margin:5px 0 0 10px;
+}
+.head .login_search .login a{
+	display: inline-block;
+	width: 24px;
+	position: absolute;
+	top: 9px;
+	color: #fff;
+}
+.container{
+	position: absolute;
+	top: 56px;
+}
+.left_list,.right_content{
+	float: left;
+}
+.left_list{
+	width: 260px;
+	height: 100%;
+	position: relative;
+	color: #6e8095;
+}
+.left_list .user_infor{
+	height: 150px;
+	background-color: #2a2e3d;
+}
+.left_list .user_infor .picture{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	border: 1px solid #b2aaad;
+	border-radius: 50%;
+	padding: 2px;
+	text-align: center;
+	left: 48px;
+	top: 18px;
+}
+.left_list .user_infor .picture img{
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	margin-top: 2px;
+}
+.left_list .user_infor .name{
+	position: absolute;
+	color: #f6f5f5;
+	font-size: 18px;
+	left: 125px;
+	top: 15px;
+}
+.left_list .user_infor ul{
+	position: absolute;
+	font-size: 14px;
+	top: 100px;
+}
+.left_list .user_infor ul li{
+	float: left;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+}
+.left_list .user_infor ul li:last-child{
+	border-left: 1px solid #6e8095;
+}
+.left_list .user_infor ul li p{
+	margin: 0;
+}
+.left_list .user_action{
+	background-color: #2a2e3d;
+}
+.left_list .user_action .menu_list{
+	padding: 15px 45px;
+}
+.left_list .user_action .menu_list li{
+	margin: 8px 0;
+	width: 260px;
+}
+.left_list .user_action .menu_list b{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+
+}
+.left_list .user_action .menu_list .icon_book{
+	background-image: url(../img/doc.png);
+}
+.left_list .user_action .menu_list .icon_doc{
+	background-image: url(../img/doc2.png);
+}
+.left_list .user_action .menu_list .item0{
+	position: absolute;
+	left: 70px;
+}
+.left_list .user_action .menu_list .inner_list .item1{
+	position: absolute;
+	left: 110px;
+}
+.left_list .user_action .menu_list .inner_list .item2{
+	position: absolute;
+	left: 150px;
+}
+#light{
+	color: #fff;
+}
+#active{
+	background-color: #383d4e;
+}
+.menu_list .inner li:hover{
+	color: #fff;
+	cursor: pointer;
+}
