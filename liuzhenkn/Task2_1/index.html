@@ -14,7 +14,7 @@
 <script type="text/javascript">
 
 (function() {
-  /*	
+  /*  
   在注释下方写下代码
   给按钮button绑定一个点击事件
   在事件处理函数中
@@ -23,14 +23,19 @@
     var btn = document.getElementById("button");
     var box = document.getElementById("aqi-display");
     var input = document.getElementById("aqi-input");
-    btn.onclick = function(){
-      if (input.value!='') {
-        box.textContent = input.value;
+    if(btn.attachEvent){
+      btn.attachEvent("onclick",click);//IE
+    }else{
+      btn.addEventListener("click",click,false);
+    }
+    function click(){
+      var content = input.value.replace(/(^\s*)|(\s*$)/g,'');//去除句子前后的空格
+      if (content!='') {
+        box.textContent = content;
       }else{
         alert("输入为空，请重新输入");
       }
-      
-    } 
+    }
 })();
 
 </script>
