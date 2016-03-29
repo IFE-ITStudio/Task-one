@@ -18,19 +18,14 @@
     });
     //左侧出
     leftOut.addEventListener("click",function(){
-    	var child = document.createElement("div");
-    	if(!addChild.firstChild){
-    		alert("队列已为空");
-    	}else{
-    		var listArr = document.getElementsByClassName("div");
-    		for(var i=0;i<listArr.length;i++){
-    			if(listArr[i].innerHTML == input.value){
-    				addChild.removeChild(listArr[i]);
-    				return;
-    			}
+    	var listArr = document.getElementsByClassName("div");
+    	for(var i=0;i<listArr.length;i++){
+    		if(listArr[i].innerHTML == input.value){
+    			addChild.removeChild(listArr[i]);
+    			return;
     		}
-    		alert("没有该元素");
     	}
+    	alert("没有该元素");
     });
     //右侧入
     rightIn.addEventListener("click",function(){
@@ -45,19 +40,14 @@
     });
     //右侧出
     rightOut.addEventListener("click",function(){
-    	var child = document.createElement("div");
-    	if(!addChild.firstChild){
-    		alert("队列已为空");
-    	}else{
-    		var listArr = document.getElementsByClassName("div");
-    		for(var i=listArr.length;i>0;i--){
-    			if(listArr[i-1].innerHTML == input.value){
-    				addChild.removeChild(listArr[i-1]);
-    				return;
-    			}
+    	var listArr = document.getElementsByClassName("div");
+    	for(var i=listArr.length;i>0;i--){
+    		if(listArr[i-1].innerHTML == input.value){
+    			addChild.removeChild(listArr[i-1]);
+    			return;
     		}
-    		alert("没有该元素");
     	}
+    	alert("没有该元素");
     });
     //点击某个div
     window.addEventListener("click",function(){
