@@ -79,57 +79,60 @@ window.onload = function(){
     	alert("没有该元素");
     });
     //点击某个li
-    window.addEventListener("click",function(){
+    addChild.addEventListener("click",function(){
         //clearInterval(action);
 	    var listArr = document.getElementsByClassName("li");
 		for(var i =0; i< listArr.length;i++){
 	    	listArr[i].onclick=function(){
-                //console.log(this);
 	    		alert("被删除的元素的值:"+this.innerHTML);
 	    		this.remove();
 	    	}
-		}    	
+		}
+        getValues();    	
     });
     sortbtn.addEventListener("click",function(){
         sort();
         action = setInterval("draw()",speed);
     });
 }
-    var action;
-    var valueArr = [];
-    var speed = 20;
-    function sort(){
-        var listArr = document.getElementsByClassName("li");
-        for(var i=0;i<listArr.length;i++){
-            valueArr[i] = parseInt(listArr[i].innerHTML);
-        }
-        for(var k=0;k<listArr.length;k++){
-            var value;
-            for(var j=0;j<listArr.length-1;j++){
-                if(valueArr[j]>valueArr[j+1]){
-                    value = valueArr[j];
-                    valueArr[j] = valueArr[j+1];
-                    valueArr[j+1] = value;
-                }
-            }
-        }
-        return valueArr;
-    }
-    function draw(){
-        var listArr = document.getElementsByClassName("li");
-        for(var i=0;i<listArr.length;i++){
-            //console.log(listArr[i].offsetHeight);
-            var height = listArr[i].offsetHeight;
-            if(listArr[i].offsetHeight<valueArr[i]*2){
-                height++;
-                listArr[i].style.height = height + "px";
-                listArr[i].style.lineHeight = height + "px";
-                listArr[i].innerHTML = valueArr[i];
-            }else if(listArr[i].offsetHeight>valueArr[i]*2){
-                height--;
-                listArr[i].style.height = height + "px";
-                listArr[i].style.lineHeight = height + "px";
-                listArr[i].innerHTML = valueArr[i];
+var action;
+var valueArr = [];
+var speed = 20;
+function getValues(){
+    var listArr = document.getElementsByClassName("li");
+    for(var i=0;i<listArr.length;i++){
+        valueArr[i] = parseInt(listArr[i].innerHTML);
+    }  
+}
+function sort(){
+    getValues();
+    for(var k=0;k<valueArr.length;k++){
+        var value;
+        for(var j=0;j<valueArr.length-1;j++){
+            if(valueArr[j]>valueArr[j+1]){
+                value = valueArr[j];
+                valueArr[j] = valueArr[j+1];
+                valueArr[j+1] = value;
             }
         }
     }
+    return valueArr;
+}
+function draw(){
+    var listArr = document.getElementsByClassName("li");
+    for(var i=0;i<listArr.length;i++){
+        //console.log(listArr[i].offsetHeight);
+        var height = listArr[i].offsetHeight;
+        if(listArr[i].offsetHeight<valueArr[i]*2){
+            height++;
+            listArr[i].style.height = height + "px";
+            listArr[i].style.lineHeight = height + "px";
+            listArr[i].innerHTML = valueArr[i];
+        }else if(listArr[i].offsetHeight>valueArr[i]*2){
+            height--;
+            listArr[i].style.height = height + "px";
+            listArr[i].style.lineHeight = height + "px";
+            listArr[i].innerHTML = valueArr[i];
+        }
+    }
+}
