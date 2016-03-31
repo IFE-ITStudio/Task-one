@@ -84,8 +84,7 @@ rightOut.addEventListener("click",function(){
 addChild.addEventListener("click",function(){
 	var listArr = document.getElementsByClassName("div");
 	for(var i =0; i< listArr.length;i++){
-		var j = i;
-	    listArr[j].onclick=function(){
+	    listArr[i].onclick=function(){
 	    	alert("被删除的元素的值:"+this.innerHTML);
 	    	this.remove();
 	    }

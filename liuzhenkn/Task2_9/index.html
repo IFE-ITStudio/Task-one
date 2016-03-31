@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE Task2_8</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		li{
+			margin-right: 10px;
+			padding: 10px;
+			font-size: 16px;
+			background-color: #88ccff;
+			display: inline-block;
+			color: #fff;
+		}
+		#tag_box,#interest_box{
+			padding: 10px;
+		}
+		#tag_box li{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="tag_box">
+		Tag:<input type="text" id="tag">
+		<ul id="tag_group">
+			
+		</ul>
+	</div>
+	<div id="interest_box">
+		<textarea id="interest_input" cols="30" rows="10"></textarea>
+		<input type="button" id="interest_btn" value="确认兴趣爱好">
+		<ul id="interest_group">
+			
+		</ul>
+	</div>
+</body>
+<script src="task.js"></script>
+</html>
