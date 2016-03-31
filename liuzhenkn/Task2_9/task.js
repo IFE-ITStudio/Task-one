@@ -4,7 +4,7 @@ window.onload = function(){
     var textarea = document.getElementById("interest_input");
     var ints_group = document.getElementById("interest_group");
     var btn = document.getElementById("interest_btn");
-
+    //
     addEvent(tag_input,"keyup",function(event){
         if(/[\s|,|，]+$/g.test(tag_input.value) || event.keyCode == 13 ){
             var data = trim(tag_input.value);
@@ -31,7 +31,7 @@ window.onload = function(){
             }
         }
     });
-
+    //
     addEvent(tag_group,"mousemove",function(){
         var tagArr = traverseUl(tag_group);
         for(var i=0;i<tagArr.length;i++){
@@ -40,7 +40,7 @@ window.onload = function(){
             }
         }
     });
-
+    //
     addEvent(btn,"click",function(){
         var intsArr = trim_textarea(textarea.value);
         var tagArr = traverseUl(ints_group);
@@ -71,7 +71,7 @@ window.onload = function(){
         }
     });
 }
-
+//事件浏览器兼容
 function addEvent(ele,event,fn){
     try{
         ele.addEventListener(event,fn,false);
@@ -85,7 +85,7 @@ function addEvent(ele,event,fn){
         }
     }
 }
-
+//给标签添加样式
 function addTagStyle(){
     var tagArr = traverseUl(tag_group);
     for(var i=0;i<tagArr.length;i++){
@@ -107,16 +107,16 @@ function addTagStyle(){
         };
     }
 }
-
+//字符串处理
 function trim(str){
-    return str.replace(/\s|,|，+$|^\s+/g,"");
+    return str.replace(/\s|,|，+$|^\s|,|，+/g,"");
 }
 
 function trim_textarea(str){
     var intsArr = str.replace(/[\s,，;；、]*$|^[\s,，;；、]*/g,"").split(/[\s\n,，;；、]+/g);
     return intsArr;
 }
-
+//遍历ul获取li
 function traverseUl(ele){
     var liArr = ele.getElementsByTagName("li");
     return liArr;

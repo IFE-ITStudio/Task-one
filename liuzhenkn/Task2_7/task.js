@@ -104,6 +104,7 @@ function getValues(){
         valueArr[i] = parseInt(listArr[i].innerHTML);
     }  
 }
+//数组排序（冒泡排序）
 function sort(){
     getValues();
     for(var k=0;k<valueArr.length;k++){
@@ -118,6 +119,7 @@ function sort(){
     }
     return valueArr;
 }
+//动画函数
 function draw(){
     var listArr = document.getElementsByClassName("li");
     for(var i=0;i<listArr.length;i++){

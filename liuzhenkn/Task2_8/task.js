@@ -80,7 +80,7 @@ rightOut.addEventListener("click",function(){
     }
 
 });
-    //点击某个div
+//点击某个div
 addChild.addEventListener("click",function(){
 	var listArr = document.getElementsByClassName("div");
 	for(var i =0; i< listArr.length;i++){
@@ -90,6 +90,7 @@ addChild.addEventListener("click",function(){
 	    }
 	}    	
 });
+//匹配函数
 match.addEventListener("click",function(){
     var listArr = document.getElementsByClassName("div");
     var matchString = matchInput.value;
@@ -105,6 +106,7 @@ match.addEventListener("click",function(){
         }
     }
 });
+//重置颜色函数
 reset.addEventListener("click",function(){
     var listArr = document.getElementsByClassName("div");
     for(var i=0;i<listArr.length;i++){
