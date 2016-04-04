@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE task2_10</title>
+	<style>
+		#root{
+			margin: 0 auto;
+			height: 300px;
+			width: 800px;
+		}
+		div{
+			float: left;
+			border: 1px solid #000;
+			margin: 20px 0 0 20px;
+			width: calc(50% - 32px);
+			height: calc(100% - 40px);
+		}
+	</style>
+	<script src="task.js"></script>
+</head>
+<body>
+	<input type="button" onclick="traversal('pre')" value="前序遍历">
+	<input type="button" onclick="traversal('mid')" value="中序遍历">
+	<input type="button" onclick="traversal('last')" value="后序遍历">
+	<input type="text" id="speed" placeholder="请输入时间间隔" value="500">ms
+	<div id="root">
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
