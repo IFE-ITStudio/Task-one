@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE task2_10</title>
+	<style>
+		#root{
+			margin: 40px;
+			width: 95%;
+		}
+		div{
+			float: left;
+			border: 2px solid #000;
+			margin: 20px 0 0 20px;
+			padding: 10px;
+		}
+		.first{
+			border-color: lightblue;
+		}
+		.second{
+			border-color:deeppink;
+		}
+		.third{
+			border-color:yellowgreen;
+		}
+		.forth{
+			border-color: deepskyblue;
+		}
+	</style>
+	<script src="task.js"></script>
+</head>
+<body>
+	<input type="button" onclick="traversal('deep')" value="深度优先搜索">
+	<input type="button" onclick="traversal('range')" value="广度优先搜索">
+	<!-- <input type="button" onclick="traversal('last')" value="后序遍历"> -->
+	<input type="text" id="speed" placeholder="请输入时间间隔" value="500">ms
+	<input type="text" id="key" placeholder="请输入关键字">
+		<div id="root" class="first">
+			Super
+			<div class="second">
+				Cat
+				<div class="third">
+					Apple
+					<div class="forth">Pear</div>
+					<div class="forth">Pig</div>
+					<div class="forth">Cola</div>
+					<div class="forth">Soccer</div>
+				</div>
+				<div class="third">
+					Phone
+				</div>
+				<div class="third">
+					Build
+					<div class="forth">Book</div>
+					<div class="forth">School</div>
+				</div>
+			</div>
+			<div class="second">
+				Note
+				<div class="third">
+					Human
+					<div class="forth">Code</div>
+					<div class="forth">Operate</div>
+					<div class="forth">Man</div>
+				</div>
+				<div class="third">
+					Program
+					<div class="forth">
+						Bement
+						<div>
+							car
+						</div>
+					</div>
+					<div class="forth">
+						Glass
+					</div>
+				</div>
+			</div>
+			<div class="second">
+				Fish
+			</div>
+		</div>
+</body>
+</html>
