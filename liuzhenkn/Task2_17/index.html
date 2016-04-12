@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE Task2_17</title>
+	<style>
+        body {
+            font-size: 20px;
+            font-family: 'Microsoft yahei';
+        }
+        input{
+            border: 2px solid #a8a8a8;
+            font-size: 25px;
+            border-radius: 5px;
+            outline: none;
+        }
+        #message {
+            color: #a8a8a8;
+        }
+        
+        .error > label > input{
+            border-color: #e60000
+        }
+        .error > #message {
+            color: #e60000;
+        }
+        .right  > label > input{
+            border-color: #88ccff;
+        }
+        .right > #message {
+            color: #88ccff;
+        }
+        #container {
+            position: absolute;   
+            width: 800px;            
+            padding: 100px;
+            margin: auto;      
+        }
+        #container > label > span {
+            position: absolute;
+            left: 0;
+            line-height: 60px;
+        }
+        #container > button {
+            display: inline-block;
+            width: 100px;
+            height: 60px;
+            float: right;
+            line-height: 60px;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            background: #2f79ba;
+            border: none;
+            cursor: pointer;
+        }
+        #name {
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            width: 670px;
+        }
+    
+	</style>
+</head>
+<body>
+	<div id="container">
+		<label>
+			<span>名称</span>
+			<input id="name" type="text">
+		</label>
+		<button id="btn" onclick="judge()">验证</button>
+		<p id="message">请输入长度为4~16的字符串</p>
+	</div>
+</body>
+<script src="task.js"></script>
+</html>
