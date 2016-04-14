@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE Task2_18</title>
+	<script src="task.js"></script>
+	<style>
+		body{
+			font-size: 16px;
+		}
+		form{
+			display: block;
+			width: 600px;
+			margin: 0 auto;
+		}
+		input{
+			width: 400px;
+			height: 40px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		label{
+			display: block;
+			text-align: right;
+		}
+		#submit{
+			margin-top: 30px;
+			margin-left: 400px;
+			display: block;
+            width: 80px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            background: #2f79ba;
+            border: none;
+            cursor: pointer;
+		}
+		span{
+			font-size: 12px;
+			color: #ccc;
+		}
+		.error > input{
+			border-color: red;
+		}
+		.error > span{
+			color: red;
+		}
+		.right > input{
+			border-color: #88ccff;
+		}
+		.right > span{
+			color: #88ccff;
+		}
+	</style>
+</head>
+<body>
+	<form action="post">
+		<table>
+			<tbody>
+				<tr>
+					<td>
+					    <label for="name">姓名：</label>
+					</td>
+					<td>
+						<input id="name" type="text"><br>
+						<span id="nameRemind"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="password">密码：</label>
+					</td>
+					<td>
+						<input type="password" id="password"><br>
+						<span id="passwordRemind"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="sure">确认密码：</label>
+					</td>
+					<td>
+						<input type="password" id="sure"><br>
+						<span id="sureRemind"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="email">邮箱：</label>
+					</td>
+					<td>
+						<input type="text" id="email"><br>
+						<span id="emailRemind"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="phone">手机：</label>
+					</td>
+					<td>
+						<input type="text" id="phone"><br>
+						<span id="phoneRemind"></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="button" id="submit" value="提交">
+	</form>
+</body>
+</html>

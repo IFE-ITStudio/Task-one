@@ -17,19 +17,6 @@ var msg_inf = {
 		"className":"right"
 	}
 }
-function addEvent(ele,event,fn){
-    try{
-        ele.addEventListener(event,fn,false);
-    }
-    catch(e){
-        try{
-            ele.attachEvent("on" + event,fn);
-        }
-        catch(e){
-            ele["on" + event] = fn;
-        }
-    }
-}
 function refresh(element,param){
 	element.className = param.className;
 	msg.innerHTML = param.infor;
