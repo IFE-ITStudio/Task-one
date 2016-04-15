@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 2_19</title>
+	<style>
+		.container{
+			margin:0 auto;
+			width: 500px;
+			text-align: center;
+		}
+		.select{
+			margin-top: 20%;
+			margin-bottom: 100px;
+		}
+		select{
+			width: 150px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="select">
+			<input name="select" id="onSchool" type="radio">在校生
+			<input name="select" id="outSchool" type="radio">非在校生
+		</div>
+		<div class="result">
+			<select id="local" style="display: none;">
+				<option value=""></option>
+				<option value="beijing">北京</option>
+				<option value="shanghai">上海</option>
+				<option value="shandong">山东</option>
+			</select>
+			<select id="school" style="display: none;">
+			</select>
+			<textarea id="text" cols="30" rows="10" style="display: none;"></textarea>	
+		</div>
+	</div>
+</body>
+<script src="task.js"></script>
+</html>
